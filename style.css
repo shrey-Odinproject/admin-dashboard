@@ -71,4 +71,89 @@ input{
 /* ___________________________________________________ */
 .main-content{
     border: 5px solid slateblue;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.main-content>*{
+    border: 5px solid aquamarine;
+}
+.announcements{
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+.announcements>*{
+    border: 5px solid orange;
+}
+.announcements div{
+    display: flex;
+    align-items: center;
+}
+.announcements div>*{
+    border: 5px solid palevioletred;
+}
+.announcements p{
+    font-size: x-small;
+}
+.announcements p::first-line{
+    font-weight: bold;
+}
+.trending{
+    display: grid;
+}
+.trending>*{
+    border: 5px solid pink;
+}
+.trending div{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+}
+.trending div>*{
+    border: 5px solid greenyellow;
+}
+.trending img{
+    width: 40px;
+    height: 40px;
+    grid-row: 1/3;
+}
+.trending p{
+    font-size: x-small;
+}
+.trending p::first-line{
+    font-weight: bold;
+}
+.your-projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+}
+.your-projects>*{
+    border: 5px solid burlywood;
+}
+.card>p:first-child::first-line{
+    font-weight: bold;
+}
+.card>p:nth-child(2){
+font-size: small;
+}
+.card{
+    display: grid;
+    grid-template-rows: 1fr;
+}
+.card>*{
+    border: 5px solid red;
+}
+.card img{
+    width: 20px;
+    height: 20px;
+}
+
+.three-svg{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
 }
