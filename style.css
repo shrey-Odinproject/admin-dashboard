@@ -1,6 +1,9 @@
 *{
     list-style-type: none;
 }
+body{
+    font-family: sans-serif;
+}
 img{
     width: 70px;
   height: 70px;
@@ -16,6 +19,38 @@ img{
 .sidebar{
     border: 5px solid mediumvioletred;
     grid-area: 1/1/3/2;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.sidebar>*{
+    border: 5px solid deepskyblue;
+}
+.dashboard{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+}
+.menu{
+    display: grid;
+    align-content: flex-start;
+}
+.menu>*{
+    border: 5px solid teal;
+}
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-items: center;
+    
+}
+ul>*{
+    border: 5px solid lime;
+}
+.menu li::before{
+    padding: 0 5px 0 0;
+    content: url("icons/shield-lock.svg");
+    vertical-align: -40%;
 }
 /* ___________________________________________________ */
 .header{
@@ -55,6 +90,14 @@ img{
     border: 5px solid green;
     display: flex;
 }
+button{
+    border: none;
+    border-radius: 100px;
+    padding: 5px 6px 7px 6px;
+    width: 78px;
+    background-color: skyblue;
+    color: white;
+}
 .search{
     border: 5px solid yellow;
     display: flex;
@@ -73,6 +116,7 @@ input{
     border: 5px solid slateblue;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    gap: 15px;
 }
 .main-content>*{
     border: 5px solid aquamarine;
@@ -98,6 +142,7 @@ input{
     font-size: x-small;
 }
 .announcements p::first-line{
+    font-size: small;
     font-weight: bold;
 }
 .trending{
@@ -134,15 +179,15 @@ input{
 .your-projects>*{
     border: 5px solid burlywood;
 }
-.card>p:first-child::first-line{
-    font-weight: bold;
-}
-.card>p:nth-child(2){
-font-size: small;
-}
+
 .card{
     display: grid;
     grid-template-rows: 1fr;
+    padding-bottom: 15px;
+    border-left: 10px solid teal;
+    border-radius: 15px;
+    gap: 10px;
+    padding-top: 10px;
 }
 .card>*{
     border: 5px solid red;
@@ -150,6 +195,19 @@ font-size: small;
 .card img{
     width: 20px;
     height: 20px;
+}
+.card-text{
+display: flex;
+flex-flow: column nowrap;
+justify-content: flex-start;
+}
+.card-text>*{
+    border:5px solid purple;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.card-text p{
+    font-size: small;
 }
 
 .three-svg{
