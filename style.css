@@ -11,73 +11,96 @@ img{
 /* ___________________________________________________ */
 .container{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 0.8fr 4fr;
     grid-template-rows: 1fr 4fr;
-    border: 5px solid aqua;
+    column-gap: 15px;
+    /* border: 5px solid aqua; */
+}
+.container>*{
+    /* border: 5px solid brown; */
 }
 /* ___________________________________________________ */
 .sidebar{
-    border: 5px solid mediumvioletred;
+    /* border: 5px solid mediumvioletred; */
     grid-area: 1/1/3/2;
     display: grid;
     grid-template-rows: auto 1fr;
+    background-color: whitesmoke;
+    color: teal;
 }
 .sidebar>*{
-    border: 5px solid deepskyblue;
+    /* border: 5px solid deepskyblue; */
 }
 .dashboard{
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
+    gap: 5px;
+}
+.dashboard>img{
+    width: 50px;
+    height: 50px;
 }
 .menu{
     display: grid;
     align-content: flex-start;
 }
 .menu>*{
-    border: 5px solid teal;
+    /* border: 5px solid teal; */
 }
 .menu ul{
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-items: center;
+    /* padding-left: 10px; */
     
 }
 ul>*{
-    border: 5px solid lime;
+    /* border: 5px solid lime; */
 }
-.menu li::before{
+ul img{
+    width: 20px;
+    height: 20px;
+    vertical-align: -30%;
+}
+/* .menu li::before{
     padding: 0 5px 0 0;
     content: url("icons/shield-lock.svg");
-    vertical-align: -40%;
-}
+    
+} */
 /* ___________________________________________________ */
 .header{
-    border: 5px solid plum;
+    /* border: 5px solid plum; */
     grid-area: 1/2/2/2;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 2fr;
+    border-bottom: 3px solid teal;
 }
 .header>*{
     align-items: center;
     justify-content: space-evenly
 }
 .greetings{
-    border: 5px solid red;
+    /* border: 5px solid red; */
     display: flex;
     gap: 20px;
 }
 .greetings p::first-line{
-    font-size: x-small;
+    font-size: small;
 }
 .greetings p{
     width: 80% ;
+    color: teal;
+    font-weight: bold;
+    font-size: x-large;
 }
 .topright{
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
     display: flex;
+    color: teal;
+    font-weight: bold;
 }
 .topright img{
     width: 50px;
@@ -87,7 +110,7 @@ ul>*{
     content: url("icons/bell-alert-outline.svg");
 }
 .buttons{
-    border: 5px solid green;
+    /* border: 5px solid green; */
     display: flex;
 }
 button{
@@ -95,11 +118,11 @@ button{
     border-radius: 100px;
     padding: 5px 6px 7px 6px;
     width: 78px;
-    background-color: skyblue;
+    background-color: teal;
     color: white;
 }
 .search{
-    border: 5px solid yellow;
+    /* border: 5px solid yellow; */
     display: flex;
 }
 input{
@@ -107,19 +130,21 @@ input{
     background-color:  lightgray;
     border: none;
     width: 90%;
+    height: 45%;
+    outline:none;
 }
 .search::before{
     content: url("icons/magnify.svg");
 }
 /* ___________________________________________________ */
 .main-content{
-    border: 5px solid slateblue;
+    /* border: 5px solid slateblue; */
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 15px;
 }
 .main-content>*{
-    border: 5px solid aquamarine;
+    /* border: 5px solid aquamarine; */
 }
 .announcements{
     display: grid;
@@ -127,16 +152,22 @@ input{
     align-items: center;
     justify-items: center;
     gap: 10px;
+    background-color: whitesmoke;
+    border-radius: 15px;
 }
 .announcements>*{
-    border: 5px solid orange;
+    /* border: 5px solid orange; */
 }
 .announcements div{
     display: flex;
     align-items: center;
+    border-bottom: 3px solid teal;
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 .announcements div>*{
-    border: 5px solid palevioletred;
+    /* border: 5px solid palevioletred; */
 }
 .announcements p{
     font-size: x-small;
@@ -147,18 +178,23 @@ input{
 }
 .trending{
     display: grid;
+    gap: 7px;
 }
 .trending>*{
-    border: 5px solid pink;
+    /* border: 5px solid pink; */
+    background-color: teal;
+    color: white;
+    border-radius: 5px;
 }
 .trending div{
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content:flex-start;
     gap: 10px;
+    padding: 3px;
 }
 .trending div>*{
-    border: 5px solid greenyellow;
+    /* border: 5px solid greenyellow; */
 }
 .trending img{
     width: 40px;
@@ -177,7 +213,7 @@ input{
     gap: 20px;
 }
 .your-projects>*{
-    border: 5px solid burlywood;
+    /* border: 5px solid burlywood; */
 }
 
 .card{
@@ -186,11 +222,13 @@ input{
     padding-bottom: 15px;
     border-left: 10px solid teal;
     border-radius: 15px;
-    gap: 10px;
+    gap: 30px;
     padding-top: 10px;
+    background-color: whitesmoke;
+    padding: 15px;
 }
 .card>*{
-    border: 5px solid red;
+    /* border: 5px solid red; */
 }
 .card img{
     width: 20px;
@@ -202,7 +240,7 @@ flex-flow: column nowrap;
 justify-content: flex-start;
 }
 .card-text>*{
-    border:5px solid purple;
+    /* border:5px solid purple; */
     margin-bottom: 0px;
     margin-top: 0px;
 }
